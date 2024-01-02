@@ -1,0 +1,516 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/*Menu de navegación*/
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: fixed; /* Cambiado a 'fixed' para que el menú sea fijo */
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* asegura que esté por encima de otros elementos */
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333; /* Ajusta según el color de fondo de tu menú */
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-weight: bold;
+    display: inline-block;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+/* Estilo para todas las secciones */
+section {
+    padding: 45px; /* Agrega un relleno interno para separar contenido del borde */
+}
+
+p {
+    color: #555;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 60px
+}
+
+h4 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+img {
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.profile-image {
+    width: 300px;
+    height: 400px;
+    border-radius: 25% 40% 25% 40%;
+    object-fit: contain;
+    object-position: center;
+    float: left;
+}
+
+/*Banner*/
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-container p {
+    text-align: center;
+}
+
+/*Banner*/
+
+.banner {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    clear: both;
+}
+
+#video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#myVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#myVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*Habilidades*/
+
+.habilidades {
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra horizontalmente */
+}
+
+.habilidades img {
+    height: 50px; /* ajusta la altura según tus necesidades */
+    width: auto; /* permite que el ancho se ajuste automáticamente manteniendo la proporción original */
+    margin: 10px; /* ajusta el espacio alrededor de cada imagen según tus necesidades */
+}
+
+/*proyectos*/
+
+.proyectos ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.proyectos li {
+    width: 250px; /* Ancho fijo para todas las cajas, ajusta según tus necesidades */
+    border: 1px solid #ddd;
+    margin-right: 10px; /* Ajusta el espacio entre proyectos según tus necesidades */
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Dispone los elementos en columna dentro de la caja */
+}
+
+.proyectos a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.proyectos img {
+    width: 100%; /* La imagen ocupa el 100% del ancho de la caja */
+    height: auto; /* Se ajusta automáticamente la altura para mantener la proporción */
+}
+
+/*Scroll de los prouectos*/
+
+.container {
+    position: relative;
+}
+
+.container .slider {
+    display: flex;
+    background: #f8f8f8;
+    padding: 2px;
+    width: 600 px;
+    height: 150 px;
+    overflow: hidden;
+}
+
+.container .control {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #02293b;
+    cursor: pointer;
+    object-fit: cover;
+    padding: 10px;
+}
+
+.container .prev {
+    left: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .next {
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+}
+
+/*Análisis*/
+
+.analisis {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra horizontalmente */
+}
+
+.analisis img {
+    height: 90px; /* ajusta la altura según tus necesidades */
+    width: auto; /* permite que el ancho se ajuste automáticamente manteniendo la proporción original */
+    margin: 10px; /* ajusta el espacio alrededor de cada imagen según tus necesidades */
+}
+
+/*Certificaciones*/
+
+.certificaciones {
+    text-align: center;
+}
+
+.certificaciones img {
+    width:10%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.certificaciones a img {
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.certificaciones a {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #FFCE30;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.certificaciones a:hover {
+    color: #fff;
+}
+
+/*Contacto*/
+
+.contacto {
+    background-color: #f9f9f9;  /* Color de fondo claro */
+    padding: 20px;  /* Relleno alrededor del contenido */
+    border-radius: 10px;  /* Bordes redondeados */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);  /* Sombra alrededor del contenedor */
+}
+
+.contacto h2 {
+    color: #333;  /* Color del título */
+    text-align: center;  /* Centrar el título */
+}
+
+.contacto p {
+    color: #666;  /* Color del texto */
+    line-height: 1.6;  /* Espacio entre líneas */
+}
+
+.contacto a {
+    color: #333;  /* Color del enlace */
+    text-decoration: none;  /* Eliminar el subrayado del enlace */
+}
+
+.contacto a:hover {
+    color: #FFCE30;  /* Cambiar el color del enlace al pasar el cursor */
+}
+
+.contacto i {
+    color: #FFCE30;  /* Color del icono */
+    font-size: 24px;  /* Tamaño del icono */
+}
+
+
+/* Estilo de cambio de tonalidad de fondo */
+#about,
+#projects,
+#certifications,
+#contact {
+    background-color: #f8f8f8; /* Fondo blanco crema */
+}
+
+#home,
+#skills,
+#analysis,
+#testimonials {
+    background-color: #ffffff; /* Fondo blanco crema */
+}
+
+/* Testimonio */
+
+#testimonials {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center; /* Añade esta línea para centrar el texto */
+}
+
+.testimonial {
+    margin-bottom: 20px;
+}
+
+.testimonial img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: block; /* Añade esta línea para permitir el centrado de la imagen */
+    margin-left: auto; /* Añade esta línea para centrar la imagen */
+    margin-right: auto; /* Añade esta línea para centrar la imagen */
+}
+
+.testimonial h3, .testimonial h4, .testimonial p {
+    margin: 0;
+}
+
+
+/* Repositorio */
+
+.Repositorio {
+    text-align: center;
+}
+
+.Repositorio img,
+.Repositorio a {
+    display: block;
+    margin: 0 auto;
+}
+
+.grafico {
+    width: 100%;
+    height: auto;
+}
+
+.codigo {
+    background-color: #000000;
+    color: #FFCE30;
+    padding: 1px 1px 1px 7px;  /* Relleno: superior, derecho, inferior, izquierdo */
+    font-family: 'Courier New', monospace;
+    border: 2px solid #FFCE30;
+    border-radius: 10px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+
+/* Estilo para dispositivos móviles y tabletas */
+@media screen and (max-width: 768px) {
+    .hamburguesa {
+    visibility: visible;
+    cursor: pointer;
+    }
+
+    nav {
+    visibility: hidden;
+    height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    transition: height 0.3s ease; /* Agrega una transición suave para la altura */
+    }
+
+    nav.active {
+    visibility: visible;
+    height: auto;
+    }
+    .proyectos-container {
+    position: relative;
+    }
+
+    .proyectos ul {
+    display: flex; /* Usa un contenedor flex para los proyectos */
+    flex-direction: row; /* Los proyectos se muestran en una fila */
+    overflow-x: auto; /* Permitir desplazamiento horizontal */
+    white-space: nowrap; /* Evitar que los elementos se envuelvan en nuevas líneas */
+    margin-bottom: 0; /* Eliminar margen inferior */
+    }
+
+    .proyectos-container::before,
+    .proyectos-container::after {
+    content: '\2190'; /* Código Unicode para la flecha izquierda */
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    }
+
+    .proyectos ul {
+    display: flex; /* Usa un contenedor flex para los proyectos */
+    flex-direction: row; /* Los proyectos se muestran en una fila */
+    overflow-x: auto; /* Permitir desplazamiento horizontal */
+    white-space: nowrap; /* Evitar que los elementos se envuelvan en nuevas líneas */
+    margin-bottom: 0; /* Eliminar margen inferior */
+    }
+
+    .proyectos-container::after {
+    content: '\2192'; /* Código Unicode para la flecha derecha */
+    right: 0;
+    }
+
+    .proyectos-container:hover::before,
+    .proyectos-container:hover::after {
+    opacity: 1;
+    }
+
+    .proyectos li {
+    width: 100vw; /* Ocupa el 100% del ancho de la pantalla */
+    min-width: 100%; /* Garantiza que el ancho sea al menos del 100% */
+    margin-right: 10px; /* Agregar margen entre los proyectos */
+    }
+
+    .proyectos img {
+    width: 100%; /* Hacer que las imágenes ocupen el 100% del ancho */
+    height: auto; /* Mantener la proporción de aspecto */
+    }
+
+    .proyectos a {
+    display: block; /* Hacer que los enlaces ocupen todo el ancho del contenedor */
+    text-align: center; /* Centrar el texto */
+    padding: 10px; /* Añadir espacio alrededor del texto */
+    color: #000; /* Color del texto */
+    text-decoration: none; /* Eliminar subrayado del enlace */
+    overflow: hidden; /* Ocultar cualquier contenido que se desborde */
+    text-overflow: ellipsis; /* Mostrar puntos suspensivos (...) si el texto es demasiado largo */
+    }
+
+    .codigo {
+    background-color: #000000;
+    color: #FFCE30;
+    padding: 1px 1px 1px 7px;  /* Relleno: superior, derecho, inferior, izquierdo */
+    font-family: 'Courier New', monospace;
+    border: 2px solid #FFCE30;
+    border-radius: 10px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    }
+
+    .grafico {
+    width: 100%;
+    height: auto;
+}
+
+}
+
+/* Oculta el icono de hamburguesa en pantallas más grandes */
+@media screen and (min-width: 769px) {
+    .hamburguesa {
+    display: none;
+    }
+
+    nav {
+    visibility: visible;
+    height: auto;
+    display: flex;
+    }
+    
+}
+
+
