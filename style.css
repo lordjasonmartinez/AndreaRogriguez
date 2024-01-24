@@ -498,6 +498,13 @@ footer {
     text-overflow: ellipsis; /* Mostrar puntos suspensivos (...) si el texto es demasiado largo */
     }
 
+    .certificaciones img {
+        width:20%;
+        max-width: 400px;
+        border-radius: 10px;
+        margin: 10px 0;
+    }
+
     .codigo {
     background-color: #000000;
     color: #fff;
